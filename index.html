@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Honey Online Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    body.light-mode {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    body.dark-mode {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+
+    /* Jumbotron Styling */
+    .jumbotron {
+      margin-bottom: 0;
+      background-image: linear-gradient(to right, #db89c2, #feb47b);
+      color: white;
+      padding: 50px 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      animation: fadeInDown 1.5s;
+    }
+
+    /* Card Styling */
+    .panel {
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .panel:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #393636;
+      color: white;
+      padding: 25px;
+    }
+
+    footer.light-mode {
+      background-color: #eaeaea;
+      color: #000;
+    }
+
+    footer .form-inline input {
+      margin-right: 10px;
+    }
+
+    footer .btn-danger {
+      background-color: #050505;
+      border: none;
+    }
+
+    /* Button Animation */
+    .btn-danger {
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn-danger:hover {
+      background-color: #050505;
+      transform: translateY(-3px);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 2s ease-in;
+    }
+
+    /* Toggle Icon Styling */
+    .toggle-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      background-color: #ffffff;
+      border-radius: 50%;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .toggle-icon.dark-mode {
+      background-color: #000000;
+      color: #f8f5f5;
+    }
+  </style>
+</head>
+<body class="light-mode">
+
+  <!-- Dark/Light Mode Toggle Icon -->
+  <div id="modeToggle" class="toggle-icon light-mode">
+    ☀️
+  </div>
+
+  <div class="jumbotron text-center">
+    <h1 style="font-size: 8vw; font-weight: bold;">VERIA'S</h1>      
+    <p style="font-size: 1.8rem;">Your one-stop shop for everything!</p>
+  </div>
+      
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Stores</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container fade-in">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading" style="font-size: 1.5rem; font-weight: bold;">LIMITED OFFER</div>
+          <div class="panel-body"><img src="Bubblegum Pink Star Sneakers in Black.jpg" class="img-responsive" alt="LIMITED OFFER"></div>
+          <div class="panel-footer" style="font-size: 1.2rem;">GET 50% OFF!</div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading" style="font-size: 1.5rem; font-weight: bold;">CHRISTMAS DEAL</div>
+          <div class="panel-body"><img src="1fc593a997f2b7351035163ba8d2f520.jpg" class="img-responsive" alt="CHRISTMAS DEAL"></div>
+          <div class="panel-footer" style="font-size: 1.2rem;">FREE SHIPPING!</div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="panel panel-success">
+          <div class="panel-heading" style="font-size: 1.5rem; font-weight: bold;">EXCLUSIVE DEAL</div>
+          <div class="panel-body"><img src="Skate Shoes Retro Y2K Star Punk Hip-hop Skateboard Sneakers - Denim Blue _ 36.jpg" class="img-responsive" alt="Exclusive Deal"></div>
+          <div class="panel-footer" style="font-size: 1.2rem;">20% OFF ON YOUR ANY PURCHASE!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer class="container-fluid text-center">
+    <p>© 2024 Online Store. All rights reserved.</p>  
+    <form class="form-inline" id="subscriptionForm" onsubmit="return false;">
+      <label for="email">Subscribe for Updates:</label>
+      <input 
+        type="email" 
+        id="email" 
+        class="form-control" 
+        size="50" 
+        placeholder="Enter your email" 
+        required
+      >
+      <button type="button" class="btn btn-danger" onclick="subscribe()">Subscribe</button>
+    </form>
+    <p id="subscriptionMessage" style="margin-top: 10px; color: rgb(7, 7, 7); display: none;"></p>
+  </footer>
+
+  <script>
+    // Subscription Functionality
+    function subscribe() {
+      const emailInput = document.getElementById("email");
+      const subscriptionMessage = document.getElementById("subscriptionMessage");
+
+      const email = emailInput.value.trim();
+      if (email && validateEmail(email)) {
+        subscriptionMessage.style.display = "block";
+        subscriptionMessage.style.color = "green";
+        subscriptionMessage.textContent = `Thanks for subscribing! Updates will be sent to ${email}.`;
+        emailInput.value = ""; // Clear input
+      } else {
+        subscriptionMessage.style.display = "block";
+        subscriptionMessage.style.color = "red";
+        subscriptionMessage.textContent = "Please enter a valid email address.";
+      }
+    }
+
+    // Email Validation Function
+    function validateEmail(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+
+    // Dark/Light Mode Toggle
+    const modeToggle = document.getElementById("modeToggle");
+    const body = document.body;
+
+    modeToggle.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+      body.classList.toggle("light-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        modeToggle.textContent = "🌙";
+        modeToggle.classList.add("dark-mode");
+        modeToggle.classList.remove("light-mode");
+      } else {
+        modeToggle.textContent = "☀️";
+        modeToggle.classList.add("light-mode");
+        modeToggle.classList.remove("dark-mode");
+      }
+    });
+  </script>
+
+</body>
+</html>
